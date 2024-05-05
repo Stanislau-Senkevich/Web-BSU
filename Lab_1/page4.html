@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица туристических пакетов</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        .quantity-column {
+            background-color: #11d161;
+        }
+    </style>
+</head>
+<body>
+    <h1>Туристические пакеты</h1>
+    <table>
+        <tr>
+            <th>Название</th>
+            <th>Стоимость (USD)</th>
+            <th class="quantity-column">Количество</th>
+        </tr>
+        <tr>
+            <td>Экскурсия по городу</td>
+            <td rowspan="2">100</td>
+            <td class="quantity-column">5</td>
+        </tr>
+        <tr>
+            <td>Путешествие в экзотические страны</td>
+            <td class="quantity-column">7</td>
+        </tr>
+        <tr>
+            <td>Горнолыжный отдых</td>
+            <td rowspan="2">500</td>
+            <td class="quantity-column" >3</td>
+        </tr>
+        <tr>
+            <td>Морской круиз</td>
+            <td class="quantity-column">8</td>
+        </tr>
+        <tr>
+            <td>Поход в горы</td>
+            <td rowspan="2">300</td>
+            <td class="quantity-column">4</td>
+        </tr>
+        <tr>
+            <td>Поездка на велосипеде по побережью</td>
+            <td class="quantity-column">2</td>
+        </tr>
+    </table>
+</body>
+</html>

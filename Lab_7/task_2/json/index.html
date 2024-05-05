@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        "use strict";
+        window.onhashchange = switchToStateFromURLHash;
+        let SPAState = {pagename: "Main"};
+
+        function switchToStateFromURLHash() {
+            let URLHash = window.location.hash;
+            let stateStr = URLHash.substr(1);
+
+            if (stateStr != "") {
+                let parts = stateStr.split("_");
+                SPAState = { pagename: parts[0] };
+            } else {
+                SPAState = { pagename: "Main" };
+                switchToMainPage();
+            }
+
+            console.log("New state: ");
+            console.log(SPAState);
+
+            let pageHTML = "";
+            switch (SPAState.pagename) {
+                case "Main":
+                pageHTML += "<div id='main'><h3>Главная страница</h3><img src=img.jpg><p>С нашим туристическим агенством вы сможете побывать в удивительных местах</p></div>";
+                    break;
+                case "Tours":
+                    $.ajax({
+                        url: 'tours.json',
+                        dataType: 'json',
+                        success: function (data) {
+                            pageHTML += "<div id='about'><h3>Наши туры</h3><table id='abroadTable'></table><table id='russiaTable'></table></div>";
+                            document.getElementById('root').innerHTML = pageHTML;
+                            displayItems(data.menu.abroad, 'abroadTable');
+                            displayItems(data.menu.russia, 'russiaTable');
+                        }
+                    });
+                    break;
+            }
+            document.getElementById('root').innerHTML = pageHTML;
+        }
+
+        function displayItems(items, tableId) {
+            var table = $('#' + tableId);
+            $.each(items, function (index, item) {
+                var row = '<tr><td>' + item.name + '</td><td>' + item.price + '</td><td>' + item.description + '</td></tr>';
+                table.append(row);
+            });
+        }
+
+        function switchToState(newState) {
+            let stateStr = newState.pagename;
+            location.hash = stateStr;
+        }
+
+        function switchToMainPage() {
+            switchToState({ pagename: "Main" });
+        }
+
+        function switchToAboutPage() {
+            switchToState({ pagename: "Tours" });
+        }
+
+        switchToStateFromURLHash();
+    </script>
+    <input type="button" value="Main" onclick="switchToMainPage()">
+    <input type="button" value="Tours" onclick="switchToAboutPage()">
+</body>
+</html>

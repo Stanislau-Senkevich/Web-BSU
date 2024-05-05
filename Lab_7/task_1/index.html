@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        "use strict";
+        window.onhashchange = switchToStateFromURLHash;
+        let SPAState = {};
+        function switchToStateFromURLHash() {
+            let hash = window.location.hash;
+            let stateStr = hash.substr(1);
+
+            if (stateStr != "") {
+                SPAState = { pagename: stateStr };
+            }
+            if (stateStr == "") {
+                SPAState = { pagename: "Main" };
+            }
+
+            let page = "";
+            if (SPAState.pagename == "Main") {
+                page += "<div id='main'><h3>Главная страница</h3><img src=Airplane-Transponder.webp><p>С нашим туристическим агенством вы сможете побывать в удивительных местах</p></div>";
+            } else if (SPAState.pagename == "Tours") {
+                    $.ajax({
+                        url: 'cafe.json',
+                        dataType: 'json',
+                        success: function (data) {
+                            pageHTML += "<div id='about'><h3>Lavender Cafe</h3><table id='drinksTable'></table><table id='snacksTable'></table></div>";
+                            document.getElementById('root').innerHTML = pageHTML;
+                            displayItems(data.menu.drinks, 'drinksTable');
+                            displayItems(data.menu.snacks, 'snacksTable');
+                        }
+                    });
+            }
+            
+            document.getElementById('root').innerHTML = page;
+            console.log("Updated state: ");
+            console.log(SPAState);
+        }
+
+        function switchToState(newState) {
+            let stateStr = newState.pagename;
+            location.hash = stateStr;
+        }
+
+        function switchToMainPage() {
+            switchToState({ pagename: "Main" });
+        }
+
+        function switchToToursPage() {
+            switchToState({ pagename: "Tours" });
+        }
+
+        switchToStateFromURLHash();
+    </script>
+    <input type="button" value="Главная" onclick="switchToMainPage()">
+    <input type="button" value="Туры" onclick="switchToToursPage()">
+</body>
+
+</html>

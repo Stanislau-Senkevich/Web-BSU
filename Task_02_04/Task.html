@@ -1,0 +1,14 @@
+﻿координаты клика: <span id='IInfo'></span>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var coordinatesSpan = document.getElementById("IInfo");
+    
+        document.addEventListener("click", function(event) {
+            var x = event.pageX;
+            var y = event.pageY;
+            coordinatesSpan.textContent = "(" + x + ", " + y + ")";
+        });
+    });
+ </script>
+

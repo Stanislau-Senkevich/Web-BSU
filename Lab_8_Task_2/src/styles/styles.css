@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+html {
+    background-color: #ececec;
+}
+
+th {
+    border:solid #687ca5 1px;
+    background-color: transparent;
+    color:rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    width:20vw;
+}
+
+tr {
+    display: table;
+    border:solid #596888 1px;
+    background-color: #687ca5;
+}
+
+button {
+    border: none;
+    color: white;
+    background-color: #4653de;
+    margin-bottom: 100px;
+}

@@ -1,0 +1,22 @@
+{
+  "flights": [
+    {
+      "departure_city": "New York",
+      "arrival_city": "London",
+      "departure_time": "2024-05-05T08:00:00",
+      "arrival_time": "2024-05-05T12:00:00"
+    },
+    {
+      "departure_city": "Paris",
+      "arrival_city": "Los Angeles",
+      "departure_time": "2024-05-05T10:30:00",
+      "arrival_time": "2024-05-05T14:30:00"
+    },
+    {
+      "departure_city": "Chicago",
+      "arrival_city": "San Francisco",
+      "departure_time": "2024-05-05T11:45:00",
+      "arrival_time": "2024-05-05T15:45:00"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "removeComments": false,
+    "sourceMap": false,
+    "strictNullChecks": false,
+    "target": "es2015",
+    "lib": [
+      "es2015",
+      "es5",
+      "es6",
+      "dom"
+    ],
+    "resolveJsonModule": true // Add this line to enable JSON module resolution
+  },
+  "compileOnSave": true,
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}

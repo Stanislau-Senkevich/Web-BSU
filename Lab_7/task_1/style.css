@@ -1,0 +1,31 @@
+img {
+    width: 600px;
+    padding:0;
+    float:left;
+    margin:10px;
+    align-self: center;
+}
+h2 {
+    font-weight: bold;
+    font-size: 30px;
+}
+h3 {
+    font-weight: bold;
+    font-size: 30px;
+}
+p {
+    font-weight: light;
+}
+#main, #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+input {
+    width:10vw;
+    height:50px;
+    border:solid black;
+    margin-top:20px;
+    background-color: rgb(163, 175, 26);
+    color: aliceblue;
+}

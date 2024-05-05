@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>User Data</title>
+    <script src='https://code.jquery.com/jquery-latest.js'></script>
+</head>
+<body>
+    <input type=button onclick='TestLoadData()' value='загрузить JSON'><br>
+    ID пользователя: <input id=idName value=''><br>
+    Имя пользователя: <span id='IName'></span>
+
+    <script>
+        function TestLoadData() {
+            var userId = $('#idName').val();
+            $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/users/' + userId,
+                method: 'GET',
+                success: function(data) {
+                    DataLoaded(data);
+                },
+                error: function(jqXHR, StatusStr, ErrorStr) {
+                    ErrorHandler(jqXHR, StatusStr, ErrorStr);
+                }
+            });
+        }
+
+        function DataLoaded(data) {
+            $('#IName').text(data.name);
+        }
+
+        function ErrorHandler(jqXHR, StatusStr, ErrorStr) {
+            console.log('Error occurred:', ErrorStr);
+        }
+    </script>
+</body>
+</html>

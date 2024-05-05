@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резиновая рамка</title>
+    <style>
+        body {
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 107px 1fr 107px;
+            grid-template-rows: 107px 1fr 107px;
+            
+        }
+        .grid-cornerLU {
+            background-image: url("img/corner_1.png");
+            background-repeat: no-repeat;
+        }
+        .grid-cornerRU {
+            background-image: url("img/corner_2.png");
+            background-repeat: no-repeat;
+        }
+        .grid-cornerLD {
+            background-image: url("img/corner_3.png");
+            background-repeat: no-repeat;
+        }
+        .grid-cornerRD {
+            background-image: url("img/corner_4.png");
+            background-repeat: no-repeat;
+        }
+        .grid-borderU {
+            background-image: url("img/up.png");
+            background-repeat: repeat-x;
+        }
+        .grid-borderL {
+            background-image: url("img/left.png");
+            background-repeat: repeat-y;
+        }
+        .grid-borderR {
+            background-image: url("img/right.png");
+            background-repeat: repeat-y;
+        }
+        .grid-borderD {
+            background-image: url("img/bottom.png");
+            background-repeat: repeat-x;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-cornerLU"></div>
+        <div class="grid-borderU"></div>
+        <div class="grid-cornerRU"></div>
+        <div class="grid-borderL"></div>
+        <div class="grid-text">
+            Наше турагентство предлагает широкий спектр услуг для всех типов путешественников.
+            Мы специализируемся на организации индивидуальных и групповых туров,
+            включая экскурсии, круизы, пляжные отпуска, горнолыжные каникулы и многое другое.
+            Наши услуги включают бронирование отелей, авиабилетов, трансферов и аренды автомобилей.
+            Мы также предлагаем экскурсии с опытными гидами, а также организацию мероприятий и тематических туров.
+            Наша команда профессионалов поможет вам спланировать ваше путешествие с учетом ваших предпочтений и бюджета,
+            обеспечивая высокий уровень сервиса и комфорта на протяжении всей поездки.
+            С нами ваше путешествие станет незабываемым и беззаботным приключением!</div>
+        <div class="grid-borderR"></div>
+        <div class="grid-cornerLD"></div>
+        <div class="grid-borderD"></div>
+        <div class="grid-cornerRD"></div>
+    </div>
+</body>
+</html>
