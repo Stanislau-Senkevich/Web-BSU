@@ -1,33 +1,26 @@
 import React from "react";
-import "./styles.css";
 
-/**
- * Define Regions, a React component of Lab9. The model
- * data for this view (the regions names) is available at
- * window.lab9models.regionsModel().
- */
-class Regions extends React.Component {
+class Tours extends React.Component {
   constructor(props) {
     super(props);
-    // Initialize the state with an empty substring and the full list of regions
     this.state = {
       substr: "",
-      filteredRegions: []
+      tours: []
     };
 
     this.handleChangeSubstr = (event) => this.handleChange(event);
   }
 
   handleChange = (event) => {
-    const substr = event.target.value.toLowerCase();
-    const filteredRegions = window.lab9models
-      .regionsModel()
-      .filter(region => region.toLowerCase().includes(substr))
+    const strPart = event.target.value.toLowerCase();
+    const tours = window.lab9models
+      .toursModel()
+      .filter(tour => tour.toLowerCase().includes(strPart))
       .sort();
 
     this.setState({
-      substr,
-      filteredRegions
+      substr: strPart,
+      tours: tours
     });
   };
 
@@ -39,14 +32,14 @@ class Regions extends React.Component {
         </div>
         <div className="lab9-example-output">
           <span id='IInfo'>
-            {this.state.filteredRegions.length > 0 ? (
+            {this.state.tours.length > 0 ? (
               <p>
-                {this.state.filteredRegions.map(region => (
-                  <li key={region}>{region}</li>
+                {this.state.tours.map(tour => (
+                  <p key={tour}>{tour}</p>
                 ))}
               </p>
             ) : (
-              "No matching regions found"
+              "No tours found"
             )}
           </span>
         </div>
@@ -62,4 +55,4 @@ class Regions extends React.Component {
   }
 }
 
-export default Regions;
+export default Tours;

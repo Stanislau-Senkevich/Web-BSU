@@ -1,0 +1,12 @@
+<div>
+    <ul>
+        <li *ngFor="let trip of trips">
+            <div (click)="onSelect(trip)">
+                <h3>{{trip.name}}</h3>
+            </div>
+        </li>
+    </ul>
+    <div>
+        <app-trip-details [trip]="selectedTrip"></app-trip-details>
+    </div>
+</div>
