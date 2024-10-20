@@ -1,0 +1,51 @@
+2024-10-19 14:20:36 ERROR [main] ApplicationDao - Error executing query
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "SELECTTTT"
+  Position: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:266) ~[postgresql-42.7.4.jar:42.7.4]
+	at dao.ApplicationDao.getAll(ApplicationDao.java:66) [Lab_2/:?]
+	at Controller.getSortedApplications(Controller.java:28) [Lab_2/:?]
+	at View.getSortedApplications(View.java:86) [Lab_2/:?]
+	at View.start(View.java:50) [Lab_2/:?]
+	at Main.main(Main.java:31) [Lab_2/:?]
+2024-10-19 14:21:06 ERROR [main] ApplicationDao - Error executing query
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "SELECTTTT"
+  Position: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:266) ~[postgresql-42.7.4.jar:42.7.4]
+	at dao.ApplicationDao.getAll(ApplicationDao.java:64) [Lab_2/:?]
+	at Controller.getSortedApplications(Controller.java:28) [Lab_2/:?]
+	at View.getSortedApplications(View.java:86) [Lab_2/:?]
+	at View.start(View.java:50) [Lab_2/:?]
+	at Main.main(Main.java:31) [Lab_2/:?]
+2024-10-19 14:21:09 ERROR [main] ApplicationDao - Error executing query
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "SELECTTTT"
+  Position: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:266) ~[postgresql-42.7.4.jar:42.7.4]
+	at dao.ApplicationDao.getAll(ApplicationDao.java:64) [Lab_2/:?]
+	at Controller.getSortedApplications(Controller.java:28) [Lab_2/:?]
+	at View.getSortedApplications(View.java:86) [Lab_2/:?]
+	at View.start(View.java:50) [Lab_2/:?]
+	at Main.main(Main.java:31) [Lab_2/:?]

@@ -1,17 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TripDetailsComponent } from './trips/trip-details/trip-details.component';
-import { TripCenterComponent } from './trips/trip-center/trip-center.component';
+import { AutobaseFormComponent } from './autobase/autobase-form/autobase-form.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: TripCenterComponent,
-  },
-  {
-    path: 'trip/:id',
-    component: TripDetailsComponent
-  },
+  { path: 'autobase', loadChildren: () => import('./autobase/autobase.module').then(m => m.AutobaseModule) },
+  { path: 'form', component: AutobaseFormComponent }, 
+  { path: 'form/:id', component: AutobaseFormComponent }, 
+  { path: '', redirectTo: '/autobase', pathMatch: 'full' },
 ];
 
 @NgModule({

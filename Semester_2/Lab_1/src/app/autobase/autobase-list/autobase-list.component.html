@@ -1,0 +1,14 @@
+<div>
+    <ul class="list">
+        <li *ngFor="let a of autobase" class="list-item">
+            <div (click)="onSelect(a)">
+                <h3>{{a.driver}}</h3>
+            </div>
+            <div class="buttons">
+                <button (click)="onEdit(a.id)" class="btn btn-secondary">Edit</button>
+                <button (click)="onDelete(a.id)" class="btn btn-secondary">Delete</button>
+            </div>
+        </li>
+    </ul>
+    <router-outlet />
+</div>

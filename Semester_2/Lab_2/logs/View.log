@@ -1,0 +1,167 @@
+2024-10-19 14:13:21 ERROR [main] View - Error retrieving sorted applications by field: id
+exception.DaoException: Error executing query for getAll
+	at dao.ApplicationDao.getAll(ApplicationDao.java:66) ~[Lab_2/:?]
+	at Controller.getSortedApplications(Controller.java:28) ~[Lab_2/:?]
+	at View.getSortedApplications(View.java:86) [Lab_2/:?]
+	at View.start(View.java:50) [Lab_2/:?]
+	at Main.main(Main.java:31) [Lab_2/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "SELECTTTT"
+  Position: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:266) ~[postgresql-42.7.4.jar:42.7.4]
+	at dao.ApplicationDao.getAll(ApplicationDao.java:62) ~[Lab_2/:?]
+	... 4 more
+2024-10-19 14:14:45 ERROR [main] View - Error retrieving sorted applications by field: id
+exception.DaoException: Error executing query for getAll
+	at dao.ApplicationDao.getAll(ApplicationDao.java:66) ~[Lab_2/:?]
+	at Controller.getSortedApplications(Controller.java:28) ~[Lab_2/:?]
+	at View.getSortedApplications(View.java:86) [Lab_2/:?]
+	at View.start(View.java:50) [Lab_2/:?]
+	at Main.main(Main.java:31) [Lab_2/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "SELECTTTT"
+  Position: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:266) ~[postgresql-42.7.4.jar:42.7.4]
+	at dao.ApplicationDao.getAll(ApplicationDao.java:62) ~[Lab_2/:?]
+	... 4 more
+2024-10-19 14:15:39 ERROR [main] View - Error retrieving sorted applications by field: id
+exception.DaoException: Error executing query for getAll
+	at dao.ApplicationDao.getAll(ApplicationDao.java:66) ~[Lab_2/:?]
+	at Controller.getSortedApplications(Controller.java:28) ~[Lab_2/:?]
+	at View.getSortedApplications(View.java:86) [Lab_2/:?]
+	at View.start(View.java:50) [Lab_2/:?]
+	at Main.main(Main.java:31) [Lab_2/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "SELECTTTT"
+  Position: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:266) ~[postgresql-42.7.4.jar:42.7.4]
+	at dao.ApplicationDao.getAll(ApplicationDao.java:62) ~[Lab_2/:?]
+	... 4 more
+2024-10-19 14:17:19 ERROR [main] View - Error retrieving sorted applications by field: id
+exception.DaoException: Error executing query for getAll
+	at dao.ApplicationDao.getAll(ApplicationDao.java:70) ~[Lab_2/:?]
+	at Controller.getSortedApplications(Controller.java:28) ~[Lab_2/:?]
+	at View.getSortedApplications(View.java:86) [Lab_2/:?]
+	at View.start(View.java:50) [Lab_2/:?]
+	at Main.main(Main.java:31) [Lab_2/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "SELECTTTT"
+  Position: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:266) ~[postgresql-42.7.4.jar:42.7.4]
+	at dao.ApplicationDao.getAll(ApplicationDao.java:66) ~[Lab_2/:?]
+	... 4 more
+2024-10-19 14:18:34 ERROR [main] View - Error retrieving sorted applications by field: id
+exception.DaoException: Error executing query for getAll
+	at dao.ApplicationDao.getAll(ApplicationDao.java:70) ~[Lab_2/:?]
+	at Controller.getSortedApplications(Controller.java:28) ~[Lab_2/:?]
+	at View.getSortedApplications(View.java:86) [Lab_2/:?]
+	at View.start(View.java:50) [Lab_2/:?]
+	at Main.main(Main.java:31) [Lab_2/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "SELECTTTT"
+  Position: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:266) ~[postgresql-42.7.4.jar:42.7.4]
+	at dao.ApplicationDao.getAll(ApplicationDao.java:66) ~[Lab_2/:?]
+	... 4 more
+2024-10-19 14:20:34 ERROR [main] View - Invalid command input: 
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:565) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:685) ~[?:?]
+	at View.start(View.java:33) [Lab_2/:?]
+	at Main.main(Main.java:31) [Lab_2/:?]
+2024-10-19 14:20:36 ERROR [main] View - Error retrieving sorted applications by field: id
+exception.DaoException: Error executing query for getAll
+	at dao.ApplicationDao.getAll(ApplicationDao.java:70) ~[Lab_2/:?]
+	at Controller.getSortedApplications(Controller.java:28) ~[Lab_2/:?]
+	at View.getSortedApplications(View.java:86) [Lab_2/:?]
+	at View.start(View.java:50) [Lab_2/:?]
+	at Main.main(Main.java:31) [Lab_2/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "SELECTTTT"
+  Position: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:266) ~[postgresql-42.7.4.jar:42.7.4]
+	at dao.ApplicationDao.getAll(ApplicationDao.java:66) ~[Lab_2/:?]
+	... 4 more
+2024-10-19 14:21:06 ERROR [main] View - Error retrieving sorted applications by field: id
+exception.DaoException: Error executing query for getAll
+	at dao.ApplicationDao.getAll(ApplicationDao.java:68) ~[Lab_2/:?]
+	at Controller.getSortedApplications(Controller.java:28) ~[Lab_2/:?]
+	at View.getSortedApplications(View.java:86) [Lab_2/:?]
+	at View.start(View.java:50) [Lab_2/:?]
+	at Main.main(Main.java:31) [Lab_2/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "SELECTTTT"
+  Position: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:266) ~[postgresql-42.7.4.jar:42.7.4]
+	at dao.ApplicationDao.getAll(ApplicationDao.java:64) ~[Lab_2/:?]
+	... 4 more
+2024-10-19 14:21:09 ERROR [main] View - Error retrieving sorted applications by field: id
+exception.DaoException: Error executing query for getAll
+	at dao.ApplicationDao.getAll(ApplicationDao.java:68) ~[Lab_2/:?]
+	at Controller.getSortedApplications(Controller.java:28) ~[Lab_2/:?]
+	at View.getSortedApplications(View.java:86) [Lab_2/:?]
+	at View.start(View.java:50) [Lab_2/:?]
+	at Main.main(Main.java:31) [Lab_2/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "SELECTTTT"
+  Position: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:266) ~[postgresql-42.7.4.jar:42.7.4]
+	at dao.ApplicationDao.getAll(ApplicationDao.java:64) ~[Lab_2/:?]
+	... 4 more

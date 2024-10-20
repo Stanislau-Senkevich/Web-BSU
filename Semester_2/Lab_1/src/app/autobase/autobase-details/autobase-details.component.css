@@ -1,0 +1,9 @@
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border: solid grey;
+    border-radius: 10px;
+    background-color:rgb(227, 227, 227);
+    padding: 10px;
+}
