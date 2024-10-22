@@ -4,6 +4,7 @@ import org.lab3.dao.*;
 import org.lab3.entity.Application;
 import org.lab3.entity.Car;
 import org.lab3.entity.Trip;
+import org.lab3.entity.User;
 import org.lab3.exception.DaoException;
 
 import java.time.LocalDate;
@@ -38,6 +39,8 @@ public class Controller {
 
     public void putDriverOnTrip(Integer driver_id, Integer application_id, Integer car_id) throws DaoException, IllegalArgumentException, InterruptedException {
         Application application;
+        User driver;
+        Car car;
 
             if (applicationDao.getById(application_id).isPresent()) {
                 application = applicationDao.getById(application_id).get();
@@ -45,12 +48,12 @@ public class Controller {
                 throw new IllegalArgumentException("invalid application_id");
             }
             if (userDao.getById(driver_id).isPresent()) {
-                userDao.getById(driver_id).get();
+                driver = userDao.getById(driver_id).get();
             } else {
                 throw new IllegalArgumentException("invalid driver_id");
             }
             if (carDao.getById(car_id).isPresent()) {
-                carDao.getById(car_id).get();
+                car = carDao.getById(car_id).get();
             } else {
                 throw new IllegalArgumentException("invalid car_id");
             }
@@ -61,8 +64,8 @@ public class Controller {
                 application.getDepartureTime(),
                 application.getDestination(),
                 application.getDestinationTime(),
-                driver_id,
-                car_id,
+                driver,
+                car,
                 false
         );
 

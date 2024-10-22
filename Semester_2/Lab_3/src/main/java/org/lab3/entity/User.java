@@ -28,6 +28,12 @@ public class User {
 
     private String birthdate;
 
+    @OneToMany(mappedBy = "driver")
+    private List<Car> cars;
+
+    @OneToMany(mappedBy = "driver")
+    private List<Trip> trips;
+
     public User() {}
 
     public User(Integer id, String login, String password, String name, String surname, String birthdate) {
@@ -64,7 +70,6 @@ public class User {
     }
 
     private String hash(String str) {
-        // Implement hashing logic here
         return str;
     }
 

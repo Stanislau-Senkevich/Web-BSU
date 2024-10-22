@@ -1,6 +1,8 @@
 package org.lab3.factory;
 
+import org.lab3.entity.Car;
 import org.lab3.entity.Trip;
+import org.lab3.entity.User;
 
 import java.time.LocalDate;
 
@@ -10,16 +12,16 @@ public class TripFactory {
                                   LocalDate departure_time,
                                   String destination,
                                   LocalDate destination_time,
-                                  Integer driver_id,
-                                  Integer car_id,
+                                  User user,
+                                  Car car,
                                   Boolean is_completed) {
         return new Trip(id,
                 departure,
                 departure_time,
                 destination,
                 destination_time,
-                driver_id,
-                car_id,
+                user,
+                car,
                 is_completed);
     }
 }

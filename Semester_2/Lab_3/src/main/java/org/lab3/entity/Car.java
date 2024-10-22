@@ -16,8 +16,9 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "driver_id", nullable = false)
-    private Integer driverId;
+    @ManyToOne
+    @JoinColumn(name = "driver_id", nullable = false)
+    private User driver;
 
     @Column(name = "fix_state", nullable = false)
     private String fixState;
@@ -27,9 +28,9 @@ public class Car {
 
     public Car() {}
 
-    public Car(Integer id, Integer driverId, String fixState, String stateNumber) {
+    public Car(Integer id, User driver, String fixState, String stateNumber) {
         this.id = id;
-        this.driverId = driverId;
+        this.driver = driver;
         this.fixState = fixState;
         this.stateNumber = stateNumber;
     }
@@ -43,11 +44,7 @@ public class Car {
     }
 
     public Integer getDriverId() {
-        return driverId;
-    }
-
-    public void setDriverId(Integer driver_id) {
-        this.driverId = driverId;
+        return driver.getId();
     }
 
     public String getFixState() {
@@ -70,7 +67,7 @@ public class Car {
     public String toString() {
         return "Car{" +
                 "id=" + id +
-                ", driverId=" + driverId +
+                ", driverId=" + driver.getId() +
                 ", fixState='" + fixState + '\'' +
                 ", stateNumber='" + stateNumber + '\'' +
                 '}';

@@ -10,14 +10,16 @@ import java.time.LocalDate;
 @NamedQueries({
         @NamedQuery(name = "Trip.findById", query = "SELECT t FROM Trip t WHERE t.id = :id"),
         @NamedQuery(name = "Trip.findAll", query = "SELECT t FROM Trip t"),
-        @NamedQuery(name = "Trip.findByDriverId", query = "SELECT t FROM Trip t WHERE t.driverId = :driverId")
+        @NamedQuery(name = "Trip.findByDriverId", query = "SELECT t FROM Trip t WHERE t.driver.id = :driverId")
 })
 public class Trip extends Application {
-    @Column(name = "driver_id")
-    private Integer driverId;
+    @ManyToOne
+    @JoinColumn(name = "driver_id", nullable = false)
+    private User driver;
 
-    @Column(name = "car_id")
-    private Integer carId;
+    @ManyToOne
+    @JoinColumn(name = "car_id", nullable = false)
+    private Car car;
 
     @Column(name = "is_completed")
     private Boolean isCompleted;
@@ -29,30 +31,22 @@ public class Trip extends Application {
             LocalDate departureTime,
             String destination,
             LocalDate destinationTime,
-            Integer driverId,
-            Integer carId,
+            User driver,
+            Car car,
             Boolean isCompleted
     ) {
         super(id, departure, departureTime, destination, destinationTime);
-        this.driverId = driverId;
-        this.carId = carId;
+        this.driver = driver;
+        this.car = car;
         this.isCompleted = isCompleted;
     }
 
     public Integer getDriverId() {
-        return driverId;
-    }
-
-    public void setDriverId(Integer driverId) {
-        this.driverId = driverId;
+        return driver.getId();
     }
 
     public Integer getCarId() {
-        return carId;
-    }
-
-    public void setCarId(Integer carId) {
-        this.carId = carId;
+        return car.getId();
     }
 
     public Boolean getIsCompleted() {
@@ -67,8 +61,8 @@ public class Trip extends Application {
     public String toString() {
         return "Trip{" +
                 "id=" + getId() +
-                ", driverId=" + driverId +
-                ", carId=" + carId +
+                ", driverId=" + driver.getId() +
+                ", carId=" + car.getId() +
                 ", isCompleted=" + isCompleted +
                 ", departure=" + getDeparture() +
                 ", departureTime=" + getDepartureTime() +
