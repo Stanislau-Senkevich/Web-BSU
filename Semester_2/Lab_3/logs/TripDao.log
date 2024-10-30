@@ -1,0 +1,4 @@
+Oct 30, 2024 11:17:01 PM by.bsu.lab3.dao.TripDao insert
+INFO: Inserting trip: Trip{id=0, driverId=3, carId=3, isCompleted=false, departure=Miami, departureTime=2024-09-30, destination=Orlando, destinationTime=2024-09-30}
+Oct 30, 2024 11:17:01 PM by.bsu.lab3.dao.TripDao insert
+INFO: Inserted trip: Trip{id=15, driverId=3, carId=3, isCompleted=false, departure=Miami, departureTime=2024-09-30, destination=Orlando, destinationTime=2024-09-30}

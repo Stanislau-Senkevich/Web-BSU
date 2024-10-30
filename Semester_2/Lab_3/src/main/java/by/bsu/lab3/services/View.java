@@ -4,13 +4,16 @@ import by.bsu.lab3.entity.Application;
 import by.bsu.lab3.entity.Car;
 import by.bsu.lab3.entity.Trip;
 import by.bsu.lab3.exception.DaoException;
+import by.bsu.lab3.logger.LoggerManager;
 
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class View {
-    //private static final Logger logger = LogManager.getLogger(View.class);
+    private static final Logger logger = LoggerManager.getLogger(View.class.getName());
     private final Controller controller;
     private static final String COMMANDS_TEXT = "\nChoose action:" +
             "\n1 - Get sorted applications" +
@@ -33,18 +36,19 @@ public class View {
                 command = Integer.parseInt(input);
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input");
-                //logger.error("Invalid command input: " + input, e);
+                logger.warning("Invalid command input: " + input);
                 continue;
             }
 
             if (command < 0 || command > 5) {
                 System.out.println("Invalid command\n");
-                //logger.warn("Invalid command selection: " + command);
+                logger.warning("Invalid command selection: " + command);
                 continue;
             }
 
             switch (command) {
                 case 0 -> {
+                    logger.info("Exiting the application.");
                     return;
                 }
                 case 1 -> getSortedApplications(in);
@@ -65,7 +69,7 @@ public class View {
             command = Integer.parseInt(input);
         } catch (NumberFormatException e) {
             System.out.println("Invalid input");
-            //logger.warn("Invalid field selection input: " + input, e);
+            logger.warning("Invalid field selection input: " + input);
             return;
         }
         switch (command) {
@@ -76,7 +80,7 @@ public class View {
             case 5 -> field = "destination_time";
             default -> {
                 System.out.println("Invalid field");
-                //logger.warn("Invalid field command: " + command);
+                logger.warning("Invalid field command: " + command);
                 return;
             }
         }
@@ -86,13 +90,14 @@ public class View {
             applications = controller.getSortedApplications(field);
         } catch (DaoException | InterruptedException e) {
             System.out.println("Error retrieving sorted applications by field: " + field);
-            //logger.error("Error retrieving sorted applications by field: " + field, e);
+            logger.log(Level.SEVERE, "Error retrieving sorted applications by field: " + field, e);
             return;
         }
 
         for (Application application : applications) {
             System.out.println(application);
         }
+        logger.info("Sorted applications retrieved by field: " + field);
     }
 
     public void getTrips(Scanner in) {
@@ -103,7 +108,7 @@ public class View {
             id = Integer.parseInt(input);
         } catch (NumberFormatException e) {
             System.out.println("Invalid input");
-            //logger.warn("Invalid driver ID input: " + input, e);
+            logger.warning("Invalid driver ID input: " + input);
             return;
         }
         try {
@@ -111,9 +116,10 @@ public class View {
             for (Trip t : trips) {
                 System.out.println(t);
             }
+            logger.info("Fetched trips for driver ID: " + id);
         } catch (DaoException | InterruptedException e) {
             System.out.println("Error retrieving trips for driver ID: " + id);
-            //logger.error("Error retrieving trips for driver ID: " + id, e);
+            logger.log(Level.SEVERE, "Error retrieving trips for driver ID: " + id, e);
         }
     }
 
@@ -123,9 +129,10 @@ public class View {
             for (Car c : cars) {
                 System.out.println(c);
             }
+            logger.info("Fetched fixing cars.");
         } catch (DaoException | InterruptedException e) {
             System.out.println("Error retrieving fixing cars");
-            //logger.error("Error retrieving fixing cars", e);
+            logger.log(Level.SEVERE, "Error retrieving fixing cars", e);
         }
     }
 
@@ -138,7 +145,7 @@ public class View {
             driver_id = Integer.parseInt(input);
         } catch (NumberFormatException e) {
             System.out.println("Invalid input");
-            //logger.warn("Invalid driver ID input: " + input, e);
+            logger.warning("Invalid driver ID input: " + input);
             return;
         }
         System.out.println("Enter car id: ");
@@ -147,7 +154,7 @@ public class View {
             car_id = Integer.parseInt(input);
         } catch (NumberFormatException e) {
             System.out.println("Invalid input");
-            //logger.warn("Invalid car ID input: " + input, e);
+            logger.warning("Invalid car ID input: " + input);
             return;
         }
         System.out.println("Enter application id: ");
@@ -156,19 +163,18 @@ public class View {
             application_id = Integer.parseInt(input);
         } catch (NumberFormatException e) {
             System.out.println("Invalid input");
-            //logger.warn("Invalid application ID input: " + input, e);
+            logger.warning("Invalid application ID input: " + input);
             return;
         }
 
         try {
             controller.putDriverOnTrip(driver_id, application_id, car_id);
+            System.out.printf("Trip from application (id = %d) was created with driver (id = %d) and car (id = %d)%n", application_id, driver_id, car_id);
+            logger.info(String.format("Trip created with driver ID: %d, application ID: %d, car ID: %d", driver_id, application_id, car_id));
         } catch (DaoException | InterruptedException e) {
             System.out.println("Error assigning driver to trip with driver ID: " + driver_id + ", application ID: " + application_id + ", car ID: " + car_id);
-            //logger.error("Error assigning driver to trip with driver ID: " + driver_id + ", application ID: " + application_id + ", car ID: " + car_id, e);
+            logger.log(Level.SEVERE, "Error assigning driver to trip with driver ID: " + driver_id + ", application ID: " + application_id + ", car ID: " + car_id, e);
         }
-
-        System.out.printf("Trip from application (id = %d) was created with driver (id = %d) and car (id = %d)", application_id, driver_id, car_id);
-        //logger.info(String.format("Trip created with driver ID: %d, application ID: %d, car ID: %d", driver_id, application_id, car_id));
     }
 
     public void putCarOnFix(Scanner in) {
@@ -179,17 +185,17 @@ public class View {
             car_id = Integer.parseInt(input);
         } catch (NumberFormatException e) {
             System.out.println("Invalid input");
-            //logger.warn("Invalid car ID input: " + input, e);
+            logger.warning("Invalid car ID input: " + input);
             return;
         }
 
         try {
             controller.putCarOnFix(car_id);
+            System.out.printf("Car with id = %d was successfully put on fix.%n", car_id);
+            logger.info("Car with ID " + car_id + " was successfully put on fix.");
         } catch (DaoException | InterruptedException e) {
-            System.out.println("Error assigning car to fix with car ID: ");
-            //logger.warn("Error assigning car to fix with car ID: " + car_id, e);
+            System.out.println("Error assigning car to fix with car ID: " + car_id);
+            logger.log(Level.SEVERE, "Error assigning car to fix with car ID: " + car_id, e);
         }
-        System.out.printf("Car with id = %d was successfully put on fix.", car_id);
-        //logger.info("Car with ID " + car_id + " was successfully put on fix.");
     }
 }

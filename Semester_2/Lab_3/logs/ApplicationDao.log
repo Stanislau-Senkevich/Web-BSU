@@ -1,0 +1,28 @@
+Oct 30, 2024 11:12:41 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetching all applications
+Oct 30, 2024 11:12:42 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetched 10 applications
+Oct 30, 2024 11:15:06 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetching all applications
+Oct 30, 2024 11:15:07 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetched 10 applications
+Oct 30, 2024 11:16:54 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetching all applications
+Oct 30, 2024 11:16:55 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetched 10 applications
+Oct 30, 2024 11:17:01 PM by.bsu.lab3.dao.ApplicationDao getById
+INFO: Fetching application by ID: 3
+Oct 30, 2024 11:17:01 PM by.bsu.lab3.dao.ApplicationDao getById
+INFO: Fetched application by ID: 3
+Oct 30, 2024 11:17:01 PM by.bsu.lab3.dao.ApplicationDao getById
+INFO: Fetching application by ID: 3
+Oct 30, 2024 11:17:01 PM by.bsu.lab3.dao.ApplicationDao getById
+INFO: Fetched application by ID: 3
+Oct 30, 2024 11:19:50 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetching all applications
+Oct 30, 2024 11:19:51 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetched 10 applications
+Oct 30, 2024 11:20:31 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetching all applications
+Oct 30, 2024 11:20:32 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetched 10 applications

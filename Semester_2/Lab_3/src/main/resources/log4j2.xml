@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Appender for TripDao -->
+        <File name="TripDaoFile" fileName="logs/TripDao.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1} - %m%n"/>
+        </File>
+
+        <!-- Appender for ApplicationDao -->
+        <File name="ApplicationDaoFile" fileName="logs/ApplicationDao.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1} - %m%n"/>
+        </File>
+
+        <!-- Appender for CarDao -->
+        <File name="CarDaoFile" fileName="logs/CarDao.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1} - %m%n"/>
+        </File>
+
+        <!-- Appender for DispatcherDao -->
+        <File name="DispatcherDaoFile" fileName="logs/DispatcherDao.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1} - %m%n"/>
+        </File>
+
+        <!-- Appender for DriverDao -->
+        <File name="DriverDaoFile" fileName="logs/DriverDao.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1} - %m%n"/>
+        </File>
+
+        <!-- Appender for UserDao -->
+        <File name="UserDaoFile" fileName="logs/UserDao.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1} - %m%n"/>
+        </File>
+
+        <!-- Appender for View -->
+        <File name="ViewFile" fileName="logs/View.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1} - %m%n"/>
+        </File>
+
+        <!-- Appender for JdbcConnector -->
+        <File name="JdbcConnectorFile" fileName="logs/JdbcConnector.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1} - %m%n"/>
+        </File>
+
+        <!-- Appender for ConnectionPool -->
+        <File name="ConnectionPoolFile" fileName="logs/ConnectionPool.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1} - %m%n"/>
+        </File>
+
+        <!-- Appender for Main -->
+        <File name="MainFile" fileName="logs/Main.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1} - %m%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="dao.TripDao" level="debug" additivity="false">
+            <AppenderRef ref="TripDaoFile"/>
+        </Logger>
+
+        <Logger name="dao.ApplicationDao" level="debug" additivity="false">
+            <AppenderRef ref="ApplicationDaoFile"/>
+        </Logger>
+
+        <Logger name="dao.CarDao" level="debug" additivity="false">
+            <AppenderRef ref="CarDaoFile"/>
+        </Logger>
+
+        <Logger name="dao.DispatcherDao" level="debug" additivity="false">
+            <AppenderRef ref="DispatcherDaoFile"/>
+        </Logger>
+
+        <Logger name="dao.DriverDao" level="debug" additivity="false">
+            <AppenderRef ref="DriverDaoFile"/>
+        </Logger>
+
+        <Logger name="dao.UserDao" level="debug" additivity="false">
+            <AppenderRef ref="UserDaoFile"/>
+        </Logger>
+
+        <Logger name="View" level="debug" additivity="false">
+            <AppenderRef ref="ViewFile"/>
+        </Logger>
+
+        <Logger name="storage.JdbcConnector" level="debug" additivity="false">
+            <AppenderRef ref="JdbcConnectorFile"/>
+        </Logger>
+
+        <Logger name="storage.ConnectionPool" level="debug" additivity="false">
+            <AppenderRef ref="ConnectionPoolFile"/>
+        </Logger>
+
+        <Logger name="Main" level="debug" additivity="false">
+            <AppenderRef ref="MainFile"/>
+        </Logger>
+
+        <!-- Root logger -->
+        <Root level="fatal">
+            <AppenderRef ref="MainFile"/>
+        </Root>
+    </Loggers>
+</Configuration>

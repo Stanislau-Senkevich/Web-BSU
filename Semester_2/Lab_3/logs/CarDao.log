@@ -1,0 +1,16 @@
+Oct 30, 2024 11:16:56 PM by.bsu.lab3.dao.CarDao getFixingCar
+INFO: Fetching cars under repair
+Oct 30, 2024 11:16:56 PM by.bsu.lab3.dao.CarDao getFixingCar
+INFO: Fetched 4 cars under repair
+Oct 30, 2024 11:17:01 PM by.bsu.lab3.dao.CarDao getById
+INFO: Fetching car by ID: 3
+Oct 30, 2024 11:17:01 PM by.bsu.lab3.dao.CarDao getById
+INFO: Fetched car by ID: 3
+Oct 30, 2024 11:17:01 PM by.bsu.lab3.dao.CarDao getById
+INFO: Fetching car by ID: 3
+Oct 30, 2024 11:17:01 PM by.bsu.lab3.dao.CarDao getById
+INFO: Fetched car by ID: 3
+Oct 30, 2024 11:17:06 PM by.bsu.lab3.dao.CarDao putCarOnFix
+INFO: Updating car fix state to 'Under Repair' for car ID: 5
+Oct 30, 2024 11:17:06 PM by.bsu.lab3.dao.CarDao putCarOnFix
+INFO: Updated car fix state to 'Under Repair' for car ID: 5
