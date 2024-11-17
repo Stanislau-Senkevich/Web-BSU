@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Car List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+</head>
+
+<body>
+
+<h1>Car List</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Driver ID</th>
+        <th>Fix State</th>
+        <th>State Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Loop through the cars and display their details -->
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.id}"></td>
+        <td th:text="${car.driverId}"></td>
+        <td th:text="${car.fixState}"></td>
+        <td th:text="${car.stateNumber}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<p>Last visit: <span th:text="${lastVisit}"></span></p>
+<p>Visit count: <span th:text="${visitCount}"></span></p>
+
+</body>
+</html>
