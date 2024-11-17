@@ -26,3 +26,11 @@ Oct 30, 2024 11:20:31 PM by.bsu.lab3.dao.ApplicationDao getAll
 INFO: Fetching all applications
 Oct 30, 2024 11:20:32 PM by.bsu.lab3.dao.ApplicationDao getAll
 INFO: Fetched 10 applications
+Nov 05, 2024 6:07:34 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetching all applications
+Nov 05, 2024 6:07:34 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetched 10 applications
+Nov 05, 2024 6:08:39 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetching all applications
+Nov 05, 2024 6:08:40 PM by.bsu.lab3.dao.ApplicationDao getAll
+INFO: Fetched 10 applications

@@ -28,6 +28,8 @@ public class LoggerManager {
     private static void setupLogger(String className, String filePath) throws IOException {
         Logger logger = Logger.getLogger(className);
 
+        logger.setUseParentHandlers(false);
+
         FileHandler fileHandler = new FileHandler(filePath, true);
         fileHandler.setFormatter(new SimpleFormatter());
         fileHandler.setLevel(Level.ALL);
