@@ -20,7 +20,6 @@ public class ControllerMapping {
 
     public static IController resolveControllerForRequest(final IWebRequest request) {
         final String path = request.getPathWithinApplication();
-        System.out.println("Request path: " + path);
         return controllersByURL.get(path);
     }
 }

@@ -59,18 +59,9 @@ public class Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            String uri = request.getRequestURI();
-            System.out.println("Request URI: " + uri);
-
-            // Ignore favicon or non-HTML requests
-            if ("/css/gtvg.css".equals(uri)) {
-                response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-                return;
-            }
-
             String formattedDate = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
             request.getSession().setAttribute("calendar", Calendar.getInstance());
-            // Работа с cookie
+
             jakarta.servlet.http.Cookie[] cookies = request.getCookies();
             String lastVisit = "First visit";
             int visitCount = 0;
@@ -93,16 +84,13 @@ public class Servlet extends HttpServlet {
             request.setAttribute("lastVisit", lastVisit);
             request.setAttribute("visitCount", visitCount);
 
-            // Увеличиваем счетчик посещений
             visitCount++;
-            // Устанавливаем новые cookie с обновленной информацией
+
             jakarta.servlet.http.Cookie lastVisitCookie = new jakarta.servlet.http.Cookie("lastVisit", formattedDate);
             jakarta.servlet.http.Cookie visitCountCookie = new jakarta.servlet.http.Cookie("visitCount", String.valueOf(visitCount));
-            // Устанавливаем срок действия cookie
             lastVisitCookie.setMaxAge(60 * 60 * 24 * 30); // 30 дней
             visitCountCookie.setMaxAge(60 * 60 * 24 * 30); // 30 дней
 
-            // Ensure cookies are accessible throughout the app
             lastVisitCookie.setPath("/");
             visitCountCookie.setPath("/");
 
