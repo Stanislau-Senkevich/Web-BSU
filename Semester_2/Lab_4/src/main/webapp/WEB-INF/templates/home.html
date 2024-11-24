@@ -3,51 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin-left: 2rem;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header, footer {
-            background-color: #0078D4;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-left: 2rem;
-        }
-        main {
-            padding: 2rem;
-            margin-left: 2rem;
-        }
-        table {
-            width: 100%;
-            margin-left: 2rem;
-            border-collapse: collapse;
-            margin-bottom: 1rem;
-        }
-        table th, table td {
-            margin-left: 2rem;
-            border: 1px solid #ddd;
-            padding: 0.5rem;
-            text-align: left;
-        }
-        table th {
-            margin-left: 2rem;
-            background-color: #0078D4;
-            color: white;
-        }
-        a {
-            color: #0078D4;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
 </head>
 <body>
     <h1>Homepage</h1>
@@ -55,6 +11,9 @@
     <li><a href="/car/list">Cars</a></li>
     <li><a href="/trip/list">Trips</a></li>
     <li><a href="/user/list">Users</a></li>
+
+    <p>This application displays lists of entities from Postgres using Java Servlet.</p>
+    <p>Made by Stanislau Senkevich</p>
 
     <p>Last visit: <span th:text="${lastVisit}"></span></p>
     <p>Visit count: <span th:text="${visitCount}"></span></p>

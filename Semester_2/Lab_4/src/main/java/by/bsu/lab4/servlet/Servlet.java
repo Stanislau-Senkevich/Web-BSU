@@ -1,6 +1,8 @@
 package by.bsu.lab4.servlet;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.Writer;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -59,6 +61,12 @@ public class Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
+            String uri = request.getRequestURI();
+            if (uri.startsWith("/css")) {
+                serveStaticResource(uri, response);
+                return;
+            }
+
             String formattedDate = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
             request.getSession().setAttribute("calendar", Calendar.getInstance());
 
@@ -120,5 +128,21 @@ public class Servlet extends HttpServlet {
             }
             throw new ServletException(e);
         }
+    }
+
+    private void serveStaticResource(String uri, HttpServletResponse response) throws IOException {
+        String resourcePath = uri.substring(1); // Remove leading slash
+        InputStream resourceStream = getServletContext().getResourceAsStream("/" + resourcePath);
+        if (resourceStream == null) {
+            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+            return;
+        }
+
+        String mimeType = getServletContext().getMimeType(resourcePath);
+        response.setContentType(mimeType != null ? mimeType : "application/octet-stream");
+
+        OutputStream out = response.getOutputStream();
+        resourceStream.transferTo(out);
+        out.close();
     }
 }
