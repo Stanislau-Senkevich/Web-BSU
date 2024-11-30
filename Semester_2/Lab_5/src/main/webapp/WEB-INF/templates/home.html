@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <h1>Homepage</h1>
+    <li><a href="/application/list">Applications</a></li>
+    <li><a href="/car/list">Cars</a></li>
+    <li><a href="/trip/list">Trips</a></li>
+    <li><a href="/user/list">Users</a></li>
+
+    <p>This application displays lists of entities from Postgres using Java Servlet.</p>
+    <p>Made by Stanislau Senkevich</p>
+
+    <p>Last visit: <span th:text="${lastVisit}"></span></p>
+    <p>Visit count: <span th:text="${visitCount}"></span></p>
+</body>
+</html>

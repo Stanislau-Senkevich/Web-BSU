@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Trip List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+
+<body>
+
+<h1>Trip List</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Driver ID</th>
+        <th>Car ID</th>
+        <th>Is Completed</th>
+        <th>Departure</th>
+        <th>Departure Time</th>
+        <th>Destination</th>
+        <th>Destination Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Loop through the trips and display their details -->
+    <tr th:each="trip : ${trips}">
+        <td th:text="${trip.id}"></td>
+        <td th:text="${trip.driverId}"></td>
+        <td th:text="${trip.carId}"></td>
+        <td th:text="${trip.isCompleted} ? 'Yes' : 'No'"></td>
+        <td th:text="${trip.departure}"></td>
+        <td th:text="${trip.departureTime}"></td>
+        <td th:text="${trip.destination}"></td>
+        <td th:text="${trip.destinationTime}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<p>Last visit: <span th:text="${lastVisit}"></span></p>
+<p>Visit count: <span th:text="${visitCount}"></span></p>
+
+</body>
+</html>
