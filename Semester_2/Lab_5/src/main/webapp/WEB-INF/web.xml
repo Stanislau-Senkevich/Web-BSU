@@ -5,37 +5,12 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <filter>
-    <filter-name>WelcomeFilter</filter-name>
-    <filter-class>by.bsu.lab4.filter.WelcomeFilter</filter-class>
+    <filter-name>Filter</filter-name>
+    <filter-class>by.bsu.lab5.filter.Filter</filter-class>
   </filter>
 
   <filter-mapping>
-    <filter-name>WelcomeFilter</filter-name>
-    <url-pattern>/</url-pattern>
-  </filter-mapping>
-
-  <filter-mapping>
-    <filter-name>WelcomeFilter</filter-name>
-    <url-pattern>/application/list</url-pattern>
-  </filter-mapping>
-
-  <filter-mapping>
-    <filter-name>WelcomeFilter</filter-name>
-    <url-pattern>/car/list</url-pattern>
-  </filter-mapping>
-
-  <filter-mapping>
-    <filter-name>WelcomeFilter</filter-name>
-    <url-pattern>/trip/list</url-pattern>
-  </filter-mapping>
-
-  <filter-mapping>
-    <filter-name>WelcomeFilter</filter-name>
-    <url-pattern>/user/list</url-pattern>
-  </filter-mapping>
-
-  <filter-mapping>
-    <filter-name>WelcomeFilter</filter-name>
-    <url-pattern>/css/</url-pattern>
+    <filter-name>Filter</filter-name>
+    <url-pattern>/*</url-pattern>
   </filter-mapping>
 </web-app>

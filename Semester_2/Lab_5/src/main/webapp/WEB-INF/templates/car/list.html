@@ -10,6 +10,12 @@
 
 <h1>Car List</h1>
 
+<a href="/">Home</a></li>
+
+<br>
+
+<a th:if="${role == 'admin'}" href="/car/add">Add car</a>
+
 <table border="1">
     <thead>
     <tr>

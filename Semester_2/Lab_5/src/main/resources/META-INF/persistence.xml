@@ -6,9 +6,13 @@
              version="3.0">
     <persistence-unit name="web_bsu">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>by.bsu.lab5.entity.User</class>
+        <class>by.bsu.lab5.entity.Application</class>
+        <class>by.bsu.lab5.entity.Trip</class>
+        <class>by.bsu.lab5.entity.Car</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5436/web_bsu"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5436/postgres"/>
             <property name="jakarta.persistence.jdbc.user" value="postgres"/>
             <property name="jakarta.persistence.jdbc.password" value="qwerty"/>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
