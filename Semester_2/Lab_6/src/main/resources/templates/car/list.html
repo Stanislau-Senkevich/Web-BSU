@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Car List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+
+<body>
+
+<h1>Car List</h1>
+
+<a href="/">Home</a></li>
+
+<br>
+
+<a href="/car/add">Add car</a>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Fix State</th>
+        <th>State Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.id}"></td>
+        <td th:text="${car.fix_state}"></td>
+        <td th:text="${car.state_number}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

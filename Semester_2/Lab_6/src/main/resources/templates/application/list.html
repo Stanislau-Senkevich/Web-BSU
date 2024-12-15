@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Application List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+
+<body>
+
+<h1>Application List</h1>
+
+<a href="/">Home</a></li>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Departure</th>
+        <th>Departure Time</th>
+        <th>Destination</th>
+        <th>Destination Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="a : ${applications}">
+        <td th:text="${a.id}">ID</td>
+        <td th:text="${a.departure}">Departure</td>
+        <td th:text="${a.departureTime}">Departure Time</td>
+        <td th:text="${a.destination}">Destination</td>
+        <td th:text="${a.destinationTime}">Destination Time</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>

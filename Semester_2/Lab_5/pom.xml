@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>by.bsu</groupId>
-  <artifactId>Lab_4</artifactId>
+  <artifactId>Lab_5</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>Lab4 Maven Webapp</name>
@@ -75,6 +75,6 @@
       </plugin>
     </plugins>
 
-    <finalName>Lab4</finalName>
+    <finalName>Lab5</finalName>
   </build>
 </project>

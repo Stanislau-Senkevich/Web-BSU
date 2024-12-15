@@ -74,8 +74,8 @@ public class Filter implements jakarta.servlet.Filter {
             final String path = request.getRequestURI();
             final boolean isGuest = user == null || "guest".equals(user.getAccessRole());
 
-            if (isGuest && (path.startsWith("/car") || path.startsWith("/trip")
-                    || path.startsWith("/user") || path.startsWith("/application"))) {
+            if (isGuest && (path.startsWith("/car") ||
+                    path.startsWith("/user") || path.startsWith("/application"))) {
                 response.sendRedirect(request.getContextPath() + "/login");
                 return true;
             }
