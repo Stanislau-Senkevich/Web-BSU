@@ -23,7 +23,7 @@ public class CarController implements IController {
     }
 
     @GetMapping("/add")
-    public String showAddForm(Model model) {
+    public String showForm(Model model) {
         model.addAttribute("car", new Car());
         return "car/add";
     }
